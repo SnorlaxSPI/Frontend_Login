@@ -1,10 +1,14 @@
-import { GlobalStyle } from "./styles/global";
 import jpIMG from './assets/jp.svg';
+import { useState } from "react";
+
+import { GlobalStyle } from "./styles/global";
 
 function App() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
   return (
     <div className="container">
-      <GlobalStyle />
       <div className="container-login">
         <form className="login-form">
 
@@ -14,13 +18,23 @@ function App() {
           </span>
 
           <div className='wrap-input'>
-            <input className='input' type="email" />
+            <input 
+              className='input'
+              type="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
             <span className='focus-input' data-placeholder='Email'></span>
           </div>
 
           <div className='wrap-input'>
-            <input className='input' type="password" />
-            <span className='focus-input' data-placeholder='Password'></span>
+            <input 
+              className='input'
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              />
+              <span className='focus-input' data-placeholder='Password'></span>
           </div>
 
           <div className="container-login-form-btn">
@@ -34,6 +48,7 @@ function App() {
           </div>
         </form>
       </div>
+      <GlobalStyle />
     </div>
   )
 }
