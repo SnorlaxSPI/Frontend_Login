@@ -1,8 +1,10 @@
+import { GlobalStyle } from "./styles/global";
 import jpIMG from './assets/jp.svg';
 
 function App() {
   return (
     <div className="container">
+      <GlobalStyle />
       <div className="container-login">
         <form className="login-form">
 
@@ -12,12 +14,12 @@ function App() {
           </span>
 
           <div className='wrap-input'>
-            <input type='email' />
+            <input className='input' type="email" />
             <span className='focus-input' data-placeholder='Email'></span>
           </div>
 
           <div className='wrap-input'>
-            <input type='password' />
+            <input className='input' type="password" />
             <span className='focus-input' data-placeholder='Password'></span>
           </div>
 
@@ -30,7 +32,6 @@ function App() {
 
             <a className='txt2' href="#">Criar conta.</a>
           </div>
-
         </form>
       </div>
     </div>
