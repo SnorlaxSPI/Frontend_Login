@@ -2,18 +2,14 @@ import jpIMG from '../../assets/jp.svg';
 
 import { Link } from 'react-router-dom';
 import { useState } from "react";
-
-import { GlobalStyle } from "../../styles/global";
+import { LayoutComponents } from '../../components/LayoutComponents';
 
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   return (
-    <div className="container">
-      <GlobalStyle />
-      <div className="container-login">
-        <div className="wrap-login">
+    <LayoutComponents>
           <form className="login-form">
             <span className="login-form-title"> Bem vindo </span>
 
@@ -52,8 +48,6 @@ export const Login = () => {
               </Link>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
+          </LayoutComponents>
   )
 }
