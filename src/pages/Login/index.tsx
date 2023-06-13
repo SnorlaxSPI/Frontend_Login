@@ -11,7 +11,7 @@ export const Login = () => {
   return (
     <LayoutComponents>
           <form className="login-form">
-            <span className="login-form-title"> Bem vindo </span>
+            <span className="login-form-title"> AL.System</span>
 
             <span className="login-form-title">
               <img src={jpIMG} alt="Jovem Programador" />
