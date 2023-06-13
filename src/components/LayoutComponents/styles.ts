@@ -1,4 +1,7 @@
-.container {
+import styled from 'styled-components';
+
+export const Container = styled.main`
+  .container {
   width: 100%;
   margin: 0 auto;
 }
@@ -22,3 +25,4 @@
   padding: 77px 55px 33px 55px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
+`
